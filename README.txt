@@ -8,7 +8,7 @@ Models used from documentation https://mmaction2.readthedocs.io/en/latest/recogn
 Demo documentation was used as reference:
 https://github.com/open-mmlab/mmaction2/tree/master/demo#video-demo
 
-Ideally with more time, it would be better to test out all the models and compare the inference speed + GPU usage of the model (Since real-time is a requirement). Anyways,
+Ideally with more time, it would be better to test out all the models and compare the quality + inference speed + GPU usage of the model (Since real-time is a requirement). Anyways,
 
 
 #### Findings
@@ -22,6 +22,12 @@ SlowOnly+Fast R-CNN also did not perform well.
 TimeSformer had decent results. 
 
 TimeSformer should be used here.
+I'm taking qualitative accuracy (Does the result make sense for the test video?) over quantitative as these quantitative results are from specific datasets. 
+Just because it has high accuracy does not mean it would work well on other types of test videos. 
+I'm also giving less weightage for inference speed here, as we want to make sure that at least one model "works" first.
+Speed can be further optimized after. 
+Also, TimeSformer is less complex compared to the other 2, which uses other detectors in their pipeline.
+
 
 #### Action Recognition (TimeSformer divST):
 (Works)
